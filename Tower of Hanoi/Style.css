@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+.container
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  min-height: 20vh;
+}
+.Cntnr
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width:400px;
+  height: 20px;
+  justify-content: space-evenly;
+  min-height: 20vh;
+  margin:15px;
+  background-color:black;
+  text-decoration: #602727;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:30px;
+}
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 2px;
+}
+
+#incrementBtn
+{
+  width:170px;
+  height: 100px;
+  border:none;
+  color:rgb(15, 9, 0);
+  background-color: rgb(255,0,68);
+  border-radius:4px;
+  box-shadow: inset 0 0 0 0 #a418a4;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+
+}
+#incrementBtn:hover
+{
+  box-shadow: inset 170px 0 0 0 #182fb2;
+  cursor: pointer;
+  color:#000;
+}
+#decrementBtn
+{
+  width:170px;
+  height: 100px;
+  border:none;
+  color:rgb(52, 112, 164);
+  background-color: rgb(50, 52, 81);
+  border-radius:4px;
+  box-shadow: inset 0 0 0 0 #0e0e0e;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+
+}
+#decrementBtn:hover
+{
+  box-shadow: inset 170px 0 0 0 #c8711b;
+  cursor: pointer;
+  color:#000;
+}
+
+#UndoBtn
+{
+  width:170px;
+  height: 100px;
+  border:none;
+  color:rgb(52, 112, 164);
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+  border: 3px solid #42FBF2;
+  position: relative;
+  z-index:1;
+}
+#UndoBtn:hover
+{
+  color: #fff;
+  cursor:pointer;
+}
+#UndoBtn:before
+{
+  transition: 0.5s all ease;
+  position: absolute;
+  top:0; bottom:0;
+  left:50%; right:50%;
+  opacity:0;
+  content:"";
+  background-color: #42FBF2;
+}
+
+#UndoBtn:hover:before
+{
+  transition: 0.5 all ease;
+  left:0; right:0;
+  opacity:1; 
+  z-index:-1;
+}
+
+#RedoBtn
+{
+  width:170px;
+  height: 100px;
+  border:none;
+  color:rgb(19, 19, 19);
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+  border: 3px solid #1bc435;
+  position: relative;
+  z-index:1;
+}
+#RedoBtn:hover
+{
+  color: #fff;
+  cursor:pointer;
+}
+#RedoBtn:before
+{
+  transition: 0.5s all ease;
+  position: absolute;
+  top:0; bottom:0;
+  left:50%; right:50%;
+  opacity:0;
+  content:"";
+  background-color: #1bc435;
+}
+
+#RedoBtn:hover:before
+{
+  transition: 0.5 all ease;
+  left:0; right:0;
+  opacity:1; 
+  z-index:-1;
+}
+
+#RestartBtn
+{
+  width:170px;
+  height: 100px;
+  border:none;
+  color:rgb(19, 19, 19);
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+  border: 3px solid #7c6426;
+  position: relative;
+  z-index:1;
+}
+#RestartBtn:hover
+{
+  color: rgb(125, 31, 31);
+  cursor:pointer;
+}
+#RestartBtn:before
+{
+  transition: 0.5s all ease;
+  position: absolute;
+  top:0; bottom:0;
+  left:50%; right:50%;
+  opacity:0;
+  content:"";
+  background-color: #56238f;
+}
+
+#RestartBtn:hover:before
+{
+  transition: 0.5 all ease;
+  left:0; right:0;
+  opacity:1; 
+  z-index:-1;
+}
+body {
+    
+    height: 100pz;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 84, 79);
+    color:#981d1d;
+    background: #544a7d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd452, #544a7d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd452, #544a7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+
+
+
+div.TowerGame 
+{
+  width: 800px;
+  height: 200px;
+  margin: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid black;
+  
+}
+
+div.Tower 
+{
+  width: 33%;
+  height: 200px;
+  bottom: 1px;
+  background-color: #553f3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Tower::before{
+  content: '';
+  height: 200px;
+  width: 10px;
+  background-color: #000;
+  
+}
+
+
+.TowerGame 
+{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #553f3f !important;
+}
+
+
+.Disk 
+{
+  height: 30px;
+  border-radius: 6px;
+}
+
+#D1
+{
+  width: 30px;
+  /* margin-left: 35px; */
+  background-color: #45352a;
+}
+
+#D2 
+{
+  width: 60px;
+  /* margin-left: 25px; */
+  background-color: #602727;
+}
+
+#D3
+{
+  width: 90px;
+  /* margin-left: 15px; */
+  background-color: #601a60;
+}
+
+#D4 
+{
+  width: 120px;
+  /* margin-left: 5px; */
+  background-color: #276027;
+}
+
+#D5 
+{
+  width: 150px;
+  /* margin-left: -5px; */
+  background-color: #1e0e6e;
+}
+
+#D6 
+{
+  width: 180px;
+  /* margin-left: -15px; */
+  background-color: #6e0e26;
+}
+#D7 
+{
+  width: 210px;
+  /* margin-left: -25px; */
+  background-color: #e88309;
+}
+#D8 
+{
+  width: 240px;
+  /* margin-left: -35px; */
+  background-color: #0c91de;
+}
+div.Bottom 
+{
+  height: 150px;
+  width: 10.5px;
+  position: absolute;
+  left: 45px;
+  /* bottom: -0.75px; */
+  background-color: #1e0e6e;
+  z-index: -1;
+  border-radius: 5px;
+
+}
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #276027;
+    margin-top: 3%;
+
+}
+
+#Timer
+{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

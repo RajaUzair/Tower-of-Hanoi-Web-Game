@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class ="Cntnr">Tower of Hanoi Game</div>
+    <div class=body>
+
+        <div class="container">
+            <button id="incrementBtn">Increment</button>
+            <button id="decrementBtn">Decrement</button>
+            <button id="UndoBtn">Undo</button>
+            <button id="RedoBtn">Redo</button>
+            <button id="RestartBtn">Restart</button>
+        </div>
+        <div class="footer">
+            Moves:<p id="moves">0  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time Remaining: </p>
+            <div id="Timer" > 00:00</div>
+
+        </div>
+        <div class= TowerGame>
+          <div class=Tower id=T1><div class=Disk id=D1></div><div class=Disk id=D2></div><div class=Disk id=D3></div><div class=Bottom id=B1></div></div>
+          <div class=Tower id=T2><div class=Bottom id=B2></div></div>
+          <div class=Tower id=T3><div class=Bottom id=B3></div></div>            
+        </div>
+
+    </div>
+
+    <script src="Java.js"></script>
+</body>
+</html>
